@@ -35,6 +35,10 @@ if ($http_code == 200) {
 
 
 
+
+
+        
+
         header('Content-Type: application/json');
         echo json_encode(['token' => $token]);
     } else {
@@ -42,7 +46,7 @@ if ($http_code == 200) {
         echo json_encode(['error' => 'Токен не получен']);
     }
 } else {
-    
+
     header('HTTP/1.0 401 Unauthorized');
     echo json_encode(['error' => 'Неверный логин или пароль']);
 
