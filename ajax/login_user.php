@@ -10,6 +10,9 @@ if (empty($login) || empty($password)) {
     exit;
 }
 
+
+
+
 $url = 'http://auth.permaviat.ru/index.php';
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
