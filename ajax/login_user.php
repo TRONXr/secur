@@ -29,6 +29,8 @@ if ($http_code == 200) {
     if (isset($response_data['token'])) {
         $token = $response_data['token'];
         $_SESSION['token'] = $token;
+
+        
         header('Content-Type: application/json');
         echo json_encode(['token' => $token]);
     } else {
@@ -38,5 +40,10 @@ if ($http_code == 200) {
 } else {
     header('HTTP/1.0 401 Unauthorized');
     echo json_encode(['error' => 'Неверный логин или пароль']);
+
+
+
+
+
 }
 ?>

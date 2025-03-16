@@ -7,6 +7,9 @@ if (!isset($_SESSION['token']) || empty($_SESSION['token'])) {
     exit();
 }
 
+
+
+
 // Подключение к БД
 include("./settings/connect_datebase.php");
 
